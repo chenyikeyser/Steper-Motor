@@ -1,3 +1,10 @@
+// Include Camera Control
+#include <multiCameraIrControl.h>
+
+// Ir LED is in pin (9) --> Change depending on the pin 
+Canon myCamera(9);
+
+
 //Include the Arduino Stepper Library
 #include <Stepper.h>
  
@@ -39,5 +46,8 @@ void loop()
       i++;
       
       //take picture
+   
+     D5.shotNow();
+     // delay(10000);
     }
 }
